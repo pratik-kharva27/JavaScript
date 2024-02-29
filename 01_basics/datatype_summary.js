@@ -33,4 +33,21 @@ const myfunction = function (){
 
 // console.log(typeof outsideTemp);
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// stack (primitive) copy , Heap (Non - primitive) referance original
+
+let myYoutubeName = " javaScript with sparrow "
+let anothername = myYoutubeName
+anothername = " javascript with pratik "
+
+console.log(anothername);
+console.log(myYoutubeName);
+
+let userOne ={
+    email : "user@gmail.com",
+    upi:"user@upi"
+}
+let userTwo = userOne;
+userTwo.email = " sparrow@gmail.com "
+console.log(userOne.email,userTwo.email);
 
