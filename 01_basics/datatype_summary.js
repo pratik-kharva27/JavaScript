@@ -31,6 +31,6 @@ const myfunction = function (){
 }
 
 
-console.log(typeof outsideTemp);
+// console.log(typeof outsideTemp);
 
 
