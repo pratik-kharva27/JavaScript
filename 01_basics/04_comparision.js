@@ -15,4 +15,3 @@
 //undefined = 0 always return false 
 
 // console.log("2" ===  2);
-
