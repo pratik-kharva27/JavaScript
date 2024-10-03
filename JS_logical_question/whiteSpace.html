@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h3>count legnth including white space</h3>
+  <h4 id="ques"></h4>
+  <h5 id="print"></h5>
+  <script>
+    function whiteSpace(s) {
+      let count = 0;
+      for (let i = 0; i < s.split("").length; i++) {
+        count++;
+      }
+      return count;
+    }
+    document.getElementById("print").innerHTML = whiteSpace("       ruhi");
+  </script>
+</body>
+
+</html>

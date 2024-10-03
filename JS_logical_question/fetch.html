@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Fetch API</h1>
+    <script>
+        //---------------EXAMPLE 1
+        let p = fetch("https://jsonplaceholder.typicode.com/posts")
+        p.then((value) => {
+            return value.json();
+        }).then((value) => {
+            console.log(value);
+        })
+        //---------------EXAMPLE 2
+        let pr = fetch("https://jsonplaceholder.typicode.com/posts");
+        pr.then((response) => {
+            if (!response) {
+                throw new Error('SOMETHING WENT WRONG!!')
+            }
+            return response.json();
+        }).then((data) => {
+            console.log(data);
+        }).catch(error => {
+            console.log('ERROR IN FETCHING AN API , error');
+        })
+    </script>
+</body>
+
+</html>

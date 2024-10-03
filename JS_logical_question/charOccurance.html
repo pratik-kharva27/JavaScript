@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 24px;
+            padding: 10px;
+            margin: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Character Occurance</h1>
+    <h3>Enter String</h3>
+    <input type="text" id="txt"><br>
+    <input type="submit" value="Check Char Occurance" onclick="check()">
+    <div id="ans"></div>
+    <p id="sort"></p>
+    <script>
+        function check() {
+            let str = document.getElementById('txt').value;
+            let result = {};
+            for (let i = 0; i < str.length; i++) {
+                let chr = str.charAt(i);
+                if (!result[chr]) {
+                    result[chr] = 1;
+                } else {
+                    result[chr] += 1;
+                }
+            }
+            for (let key in result) {
+                document.getElementById('ans').innerHTML += key + ' : ' + result[key] + '  ';
+            }
+            console.log(result);
+            let sortedKeys = Object.values(result).sort();
+            document.getElementById('sort').innerHTML = sortedKeys;
+            console.log(sortedKeys);
+        } </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Promises</h1>
+  <script>
+    //PROMISE CREATED 
+    const myPromise = new Promise((resolve, reject) => {
+      console.log('HELLO 1');
+      setTimeout(function () {
+        console.log('HELLO FROM SETTIMEOUT');
+      }, 2000);
+    });
+    //CONSUMING PROMISE
+    myPromise.then((result) => {
+      console.log('RESOLVE', result);
+    }).catch((Error) => {
+      console.log('ERROR', Error);
+    })
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ALL THE BEST RUH!</h1>
+    <script>
+        //custom
+        function args() {
+            let ans = 0
+            for (let i = 0; i < arguments.length; i = i + 1) {
+                ans = ans + arguments[i]
+            }
+            return ans;
+        }
+
+        let sum = args(10, 20)
+        console.log(sum)
+
+
+        //using spread operator
+        function multiArgs(...numbers) {
+            let ans = 0
+            for (let i = 0; i < numbers.length; i = i + 1) {
+                ans = ans + numbers[i]
+            }
+            return ans;
+        }
+
+        let sum1 = multiArgs(10, 10)
+        console.log(sum1)
+
+        //using arrow function
+        const arrArgs = (...nums) => {
+            console.log(nums);
+        }
+        //arguments key word isn't use in arrow function
+        arrArgs(10, 20, 30, 40, 50);
+
+
+    </script>
+</body>
+
+</html>

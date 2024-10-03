@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>for..of & for..in</h1>
+    <script>
+        let arr = [10, 23, 56, 188];
+        for (let x of arr) {
+            console.log(x);
+        }
+        let obj = {
+            name: 'ruhi',
+            age: 21
+        }
+        //get object keys
+        for (let x in obj) {
+            console.log(x, obj[x]);
+        }
+
+    </script>
+</body>
+
+</html>

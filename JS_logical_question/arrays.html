@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Arrays</h1>
+    <script>
+        const arr = ['reema', 'seema', 'kreena'];
+        //console.log(arr);
+        //console.log(arr.length);
+        //console.log(arr[2]);
+        arr[0] = 'rekha';
+        // console.log(arr);
+        arr.push('alexa');
+        //console.log(arr);
+        arr.pop()
+        // console.log(arr);
+        arr.pop();
+        //console.log(arr);
+        arr.reverse();
+        arr.push('riya', 'neha', 'puja', 'prisha');
+        //console.log(arr);
+
+        //The arrays in javascript is hetrojeneous i.e. arr = [23,"ruksar",true]
+        //advance arr functions
+
+        const arr1 = ['a', 'b', 'c', 'd', 'e'];
+        const arr2 = [1, 2, 3, 4, 5];
+
+        arr1.forEach((val) => console.log(val));//loop over your array , but it nver returns anything - Used to print
+
+        arr1.map((val) => console.log(val));
+        arr2.map((val) => console.log(val * 2))//loop over the array and it returns the new array - Used to manipulate an array
+
+        let ans = arr2.find((val) => val === 4);
+        console.log(ans);   // check if value is present in the array
+
+        let answer = arr2.findIndex((val) => val === 4);
+        console.log(answer);   //check if value is present , if so it returns the index of value 
+
+        console.log(arr1.includes('r')); //check is value is included in array or not , it retuns the boolean value
+
+        const even = arr2.filter((val) => val % 2 === 0);
+        console.log(even); //It gives new array if given condition meet
+
+        let newArr = arr2.slice(1, 4);
+        console.log(newArr);    //It gives sum of the part of an array we can slice it , via index
+
+        let sArr = arr2.splice(2, 3);
+        console.log(sArr);  //It removes elemets from an oriinal array (starting index , num of  elements to be deleted) , and gives removed elements as a new array
+
+    </script>
+</body>
+
+</html>

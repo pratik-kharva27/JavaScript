@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Higher Order Functions</h1>
+    <h2>A function that takes a function as an argument</h2>
+    <script>
+        function add(a, b, cd) {
+            let sum = a + b;
+            cd(sum);
+        }
+
+        add(10, 20, function (val) {
+            console.log(val)
+        })
+
+        // Here add is a higher order function and cb is a call back function
+    </script>
+</body>
+
+</html>

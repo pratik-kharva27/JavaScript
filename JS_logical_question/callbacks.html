@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>HELLO CALLBACKS</h1>
+    <h2 id="p1"></h2>
+    <script>
+        let text = document.getElementById('p1');
+        function greet(callback) {
+            console.log('ALL THE BEST RUHI');
+            setTimeout(function () {
+                console.log('KEEP GOING');
+                callback();
+            }, 2000);
+        }
+        function callback() {
+            console.log('CONGRATULATIONS!');
+        }
+        greet(callback);
+    </script>
+</body>
+
+</html>

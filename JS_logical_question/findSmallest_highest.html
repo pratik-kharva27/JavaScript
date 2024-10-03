@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Smallest and second smallest Elements</h1>
+    <script>
+        function smallElement(arr) {
+            let ans = arr.sort((a, b) => a - b)
+            console.log('Smalles element : ', ans[0]);
+            console.log('Second Smallest element : ', ans[1]);
+        }
+        function highestEle(arr) {
+            let ans = arr.sort((a, b) => b - a);
+            console.log('Highest Element : ', ans[0]);
+            console.log('Second Highest Element : ', ans[1]);
+        }
+        let arr = [7, 20, 23, 45, 30, 60, 55];
+        console.log(arr);
+        smallElement(arr);
+        highestEle(arr);
+
+    </script>
+</body>
+
+</html>
