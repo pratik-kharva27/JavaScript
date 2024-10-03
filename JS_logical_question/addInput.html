@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: auto;
+        font-size: 25px
+    }
+
+    .container {
+        margin: 7%;
+    }
+
+    #mainDiv {
+        display: block;
+    }
+
+    .block-input {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="text" class="form-control" id="Input1" placeholder="Enter Text">
+        </div>
+    </div>
+    <div id="mainDiv">
+    </div>
+
+    <div class="btn">
+        <button type="button" class="btn btn-primary" onclick="addInput()">Add Input</button>
+        <button type="button" class="btn btn-primary" onclick="removeInput()">Remove Input</button>
+    </div>
+
+    <script>
+        const mainDiv = document.getElementById('mainDiv');
+
+        function addInput() {
+            console.log('Clicked');
+            const field = document.createElement('input');
+            field.type = 'text',
+                field.placeholder = 'Enter text'
+            mainDiv.appendChild(field);
+        }
+
+        function removeInput() {
+            if (mainDiv.lastChild) {
+                mainDiv.removeChild(mainDiv.lastChild);
+            }
+        }
+    </script>
+</body>
+
+</html>
