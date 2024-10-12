@@ -7,6 +7,7 @@ function countVowels(str){
         if(vowels.includes(char)){
             count++;
         }
-    }return count;
+    }
+    return count;
 }
 console.log(countVowels("hello sparrow"));
